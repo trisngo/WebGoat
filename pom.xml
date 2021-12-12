@@ -236,29 +236,6 @@
                     </execution>
                 </executions>
             </plugin>
-		<plugin>
-			<groupId>org.owasp</groupId>
-			<artifactId>dependency-check-maven</artifactId>
-			<version>6.1.3</version>
-			<configuration>
-			    <failBuildOnCVSS>7</failBuildOnCVSS>
-			    <skipProvidedScope>true</skipProvidedScope>
-			    <skipRuntimeScope>true</skipRuntimeScope>
-			    <suppressionFiles>
-				<!--suppress UnresolvedMavenProperty -->
-				<suppressionFile>
-				    ${maven.multiModuleProjectDirectory}/config/dependency-check/project-suppression.xml
-				</suppressionFile>
-			    </suppressionFiles>
-			</configuration>
-			<executions>
-			    <execution>
-				<goals>
-				    <goal>check</goal>
-				</goals>
-			    </execution>
-			</executions>
-		    </plugin>
         </plugins>
     </build>
 
